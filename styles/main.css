@@ -163,12 +163,16 @@ nav {
 }
 
 /* LANDING__INFO-BOX */
+.info-box__wrapper {
+    display: flex;
+}
 .info-box {
     max-height: 200px;
-    max-width: 1200px;
+    max-width: 585px;
     height: 60vh;
     width: 96.5vw;
     background-color: black;
+    margin: 0px 15px;
 }
 .info-box__header {
     font-size: 52px;
@@ -187,6 +191,25 @@ nav {
 }
 .fa-discord, .fa-twitter, .fa-youtube {
     font-size: 52px;
+}
+.info-box__subheader {
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+}
+.info-box__li--input {
+    background: none;
+    border-radius: 3rem;
+    padding: 16px 64px;
+    letter-spacing: 1px;
+}
+.info-box__li--buttn {
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-left: 12px;
+    padding: 12px 16px;
+    background-color: #7f0caa;
 }
 
 /* FOOTER */
@@ -307,12 +330,27 @@ nav {
         margin-bottom: 16px;
     }
     .info-box {
-        height: 20vh;
+        height: 50vh;
         width: 93.5vw;
         background-color: black;
+    }
+    .breaker {
+        margin-top: 16px;
     }
     .login__wrapper {
         width: 90vw;
         height: 40vh;
+    }
+    .info-box__wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .info-box__li--input {
+        padding: 16px 32px;
+    }
+    .info-box__subheader {
+        font-size: 13px;
+        letter-spacing: 0px;
     }
 }
