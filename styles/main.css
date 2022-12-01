@@ -170,6 +170,44 @@ nav {
     width: 96.5vw;
     background-color: black;
 }
+.info-box__header {
+    font-size: 52px;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: center; 
+    padding-top: 12px;
+}
+.info-box__ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+}
+.info-box__li {
+    padding: 0 12px;
+}
+.fa-discord, .fa-twitter, .fa-youtube {
+    font-size: 52px;
+}
+
+/* FOOTER */
+.footer__details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+.footer__details--text {
+    color: black;
+}
+
+/* ABOUT */
+.about__content--header {
+    font-size: 64px;
+    letter-spacing: 5px;
+    background-color: black;
+    color: white;
+}
 
 /* LOGIN */
 #login {
@@ -231,6 +269,10 @@ nav {
     font-size: 15px;
 }  
 .landing__content--header {
+    font-size: 52px;
+    letter-spacing: 5px;
+}
+.about__content--header {
     font-size: 52px;
     letter-spacing: 5px;
 }
