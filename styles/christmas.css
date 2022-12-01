@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'sans-serif';
+    color: white;
+}
+
+/* GLOBAL */
+body {
+    background-color: #CC231E;
+}
+
+.black {
+    color: black;
+}
+
+.purple {
+    color: #CC231E;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    padding: 50px 0;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.click {
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.click:hover {
+    transform: scale(1.1);
+}
+
+.click:active {
+    transform: scale(0.8);
+}
+
+.highlight {
+    position: relative;
+}
+
+.highlight::before {
+    content: "";
+    position: absolute;
+    left: -0.1px;
+    right: -0.1px;
+    bottom: 0;
+    height: 100%;
+    transform: scaleY(.3);
+    transition: transform .6s cubic-bezier(0.53, 0.21, 0, 1);
+    transform-origin: bottom;
+    background-color: hsl(0, 84%, 26%);
+    opacity: 0.6;
+}
+
+.highlight:hover::before {
+    transform: scaleY(1);
+}
+
+.underline {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+.underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #8a0f0b;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.underline:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* NAV */
+nav {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #8a0f0b;
+}
+
+#nav__ul--mobile {
+    display: none;
+}
+
+.nav__logo {
+    width: 200px;
+    margin-right: 64px;
+}
+
+.nav__ul--main {
+    display: flex;
+    align-items: center;
+}
+
+.nav__li {
+    padding: 12px;
+}
+
+.nav__a {
+    font-size: 18px;
+    letter-spacing: 0.5rem;
+}
+
+.nav__a:hover {
+    color: #7f0caa;
+}
+
+/* LANDING CONTENT */
+#landing {
+    height: 80vh;
+}
+
+.landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.landing__image--pic {
+    max-height: 380px;
+    max-width: 560px;
+    height: 60vh;
+    width: 60vw;
+    background-color: black;
+}
+
+.landing__content {
+    margin-left: 64px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.landing__content--header,
+.landing__content--subheader,
+.landing__content--button {
+    color: white;
+}
+
+.landing__content--header {
+    font-size: 64px;
+    letter-spacing: 5px;
+}
+
+.landing__content--subheader {
+    max-width: 550;
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.landing__content--button {
+    max-width: 200px;
+    padding: 8px;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background-color: white;
+    color: #CC231E;
+}
+
+/* LANDING__INFO-BOX */
+.info-box__wrapper {
+    display: flex;
+}
+
+.info-box {
+    max-height: 200px;
+    max-width: 585px;
+    height: 60vh;
+    width: 96.5vw;
+    background-color: #8a0f0b;
+    margin: 0px 15px;
+}
+
+.info-box__header {
+    font-size: 52px;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+}
+
+.info-box__ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+}
+
+.info-box__li {
+    padding: 0 12px;
+}
+
+.fa-discord,
+.fa-twitter,
+.fa-youtube {
+    font-size: 52px;
+}
+
+.info-box__subheader {
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+}
+
+.info-box__li--input {
+    background: none;
+    border-radius: 3rem;
+    padding: 16px 64px;
+    letter-spacing: 1px;
+}
+
+.info-box__li--buttn {
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-left: 12px;
+    padding: 12px 16px;
+    background-color: #CC231E;
+}
+
+/* ABOUT */
+.about__content--header {
+    font-size: 64px;
+    letter-spacing: 5px;
+    background-color: #8a0f0b;
+    color: white;
+}
+
+/* LOGIN */
+#login {
+    height: 80vh;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #8a0f0b;
+    height: 400px;
+    width: 600px;
+}
+
+.login__header--header {
+    font-size: 32px;
+    letter-spacing: 5px;
+    padding-bottom: 32px;
+}
+
+.login__details {
+    display: flex;
+    flex-direction: column;
+}
+
+.login__details--input {
+    margin-top: 16px;
+    color: black;
+    border-radius: 3rem;
+    border: none;
+    padding: 8px 32px;
+    letter-spacing: 1px;
+}
+
+.login__details--button {
+    margin-top: 16px;
+    color: #CC231E;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border: none;
+}
+
+.login__disclaimer {
+    margin-top: 32px;
+}
+
+.login__disclaimer--text {
+    font-size: 16px;
+}
+
+/* OTHER SCREENS */
+@media only screen and (max-width: 1100px) {
+    .nav__logo {
+        margin-right: 0px;
+    }
+
+    .nav__a {
+        font-size: 15px;
+    }
+
+    .landing__content--header {
+        font-size: 52px;
+        letter-spacing: 5px;
+    }
+
+    .about__content--header {
+        font-size: 52px;
+        letter-spacing: 5px;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    .nav__ul--main {
+        display: none;
+    }
+
+    .nav__ul--login {
+        display: none;
+    }
+
+    #nav__ul--mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .nav__logo {
+        width: 200px;
+    }
+
+    .fa-bars {
+        font-size: 32px;
+    }
+
+    .landing {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .landing__image--pic {
+        height: 30vh;
+        width: 90vw;
+        background-color: black;
+        margin-bottom: 16px;
+    }
+
+    .landing__content {
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center
+    }
+
+    .info-box {
+        height: 50vh;
+        width: 93.5vw;
+        background-color: black;
+    }
+
+    .breaker {
+        margin-top: 16px;
+    }
+
+    .login__wrapper {
+        width: 90vw;
+        height: 40vh;
+    }
+
+    .info-box__wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .info-box__li--input {
+        padding: 16px 32px;
+    }
+
+    .info-box__subheader {
+        font-size: 13px;
+        letter-spacing: 0px;
+    }
+}
+
+/* XMAS LIGHTS */
+.christmas-lights li {
+    --christmas-lights-1: #057d70;
+    /*color - 1*/
+    --christmas-lights-2: #d41a21;
+    /*color - 2*/
+    --christmas-lights-3: #ffd27c;
+    /*color - 3*/
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: flash-1;
+    border-radius: 50%;
+    display: inline-block;
+    height: 20px;
+    margin: 25px 20px;
+    position: relative;
+    width: 20px;
+}
+
+.christmas-lights {
+    left: 0;
+    margin: 0;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: -15px;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 100;
+}
+
+.christmas-lights[data-position="bottom"] {
+    top: auto;
+    bottom: -15px;
+    transform: scale(-1)
+}
+
+.christmas-lights[data-position="right"],
+.christmas-lights[data-position="left"] {
+    transform: rotate(-90deg);
+    left: -10px;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    width: 100vh;
+}
+
+.christmas-lights[data-position="right"] {
+    transform: rotate(90deg);
+    left: auto;
+    right: -15px;
+}
+
+.christmas-lights li:before {
+    content: "";
+    position: absolute;
+    background: #505050;
+    width: 10px;
+    height: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    top: -9px;
+    left: 5px;
+}
+
+.christmas-lights li:after {
+    content: "";
+    top: -23px;
+    left: 10px;
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    border-bottom: solid #505050 2px;
+    border-radius: 50%;
+}
+
+.christmas-lights li:last-child:after {
+    content: none;
+}
+
+.christmas-lights li:first-child {
+    margin-left: -40px;
+}
+
+.christmas-lights li:nth-child(2n+1) {
+    background: var(--christmas-lights-1);
+    box-shadow: 0px 5px 24px 3px rgb(249 212 129);
+    animation-name: flash-2;
+    animation-duration: 0.4s;
+}
+
+.christmas-lights li:nth-child(4n+2) {
+    background: var(--christmas-lights-2);
+    box-shadow: 0px 5px 24px 3px var(--christmas-lights-2);
+    animation-name: flash-3;
+    animation-duration: 1.1s;
+}
+
+.christmas-lights li:nth-child(odd) {
+    animation-duration: 1.8s;
+}
+
+.christmas-lights li:nth-child(3n+1) {
+    animation-duration: 1.4s;
+}
+
+@keyframes flash-1 {
+
+    0%,
+    100% {
+        background: var(--christmas-lights-1);
+        box-shadow: 0px 5px 24px 3px var(--christmas-lights-1);
+    }
+
+    50% {
+        background: var(--christmas-lights-2);
+        box-shadow: 0px 5px 24px 3px var(--christmas-lights-2);
+    }
+}
+
+@keyframes flash-2 {
+
+    0%,
+    100% {
+        background: var(--christmas-lights-2);
+        box-shadow: 0px 5px 24px 3px var(--christmas-lights-2);
+    }
+
+    50% {
+        background: var(--christmas-lights-3);
+        box-shadow: 0px 5px 24px 3px var(--christmas-lights-3);
+    }
+}
+
+@keyframes flash-3 {
+
+    0%,
+    100% {
+        background: var(--christmas-lights-3);
+        box-shadow: 0px 5px 24px 3px var(--christmas-lights-3);
+    }
+
+    50% {
+        background: var(--christmas-lights-1);
+        box-shadow: 0px 5px 24px 3px var(--christmas-lights-1);
+    }
+}
+
+@media (max-width: 1024px) {
+    .christmas-lights[data-position="left"] {
+        left: -14px;
+    }
+
+    .christmas-lights[data-position="right"] {
+        right: -14px;
+    }
+
+    .christmas-lights[data-position="left"],
+    .christmas-lights[data-position="right"] {
+        height: 100vh;
+    }
+}
