@@ -212,18 +212,6 @@ nav {
     background-color: #7f0caa;
 }
 
-/* FOOTER */
-.footer__details {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 32px;
-}
-.footer__details--text {
-    color: black;
-}
-
 /* ABOUT */
 .about__content--header {
     font-size: 64px;
@@ -325,9 +313,16 @@ nav {
     }
     .landing__image--pic {
         height: 30vh;
-        width: 60vw;
+        width: 90vw;
         background-color: black;
         margin-bottom: 16px;
+    }
+    .landing__content {
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center
     }
     .info-box {
         height: 50vh;
