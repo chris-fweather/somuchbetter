@@ -91,7 +91,7 @@ a {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #8a0f0b;
+    background-color: #CC231E;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -134,7 +134,7 @@ nav {
 }
 
 .nav__a:hover {
-    color: #7f0caa;
+    color: #CC231E;
 }
 
 /* LANDING CONTENT */
