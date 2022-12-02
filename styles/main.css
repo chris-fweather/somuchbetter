@@ -9,9 +9,6 @@
 }
 
 /* GLOBAL */
-/* body {
-    background-color: #CC231E;
-} */
 .black {
     color: black;
 }
@@ -57,6 +54,7 @@ a {
 
 .highlight {
     position: relative;
+    color: black;
 }
 
 .highlight::before {
@@ -137,6 +135,7 @@ nav {
 .nav__a {
     font-size: 18px;
     letter-spacing: 0.5rem;
+    color: white;
 }
 
 .nav__a:hover {
