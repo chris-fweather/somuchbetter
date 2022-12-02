@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <title>!smB | Regiment</title>
-    <link rel="stylesheet" href="./styles/christmas.css">
+    <link rel="stylesheet" href="./styles/christmas.css?<?php echo time(); ?>" />
     <script src="./js/snow.js"></script>
     <script src="./js/index.js"></script>
     <script src="https://kit.fontawesome.com/d2256f7f6b.js" crossorigin="anonymous"></script>
@@ -31,9 +35,15 @@
             </li>
         </ul>
         <ul class="nav__ul--login">
-            <li class="nav__li">
-                <a class="nav__a underline" href="./login.php">LOGIN</a>
-            </li>
+            <?php
+                if (isset($_SESSION['useruid'])) {
+                    echo '<li class="nav__li"><a class="nav__a underline" href="./index.php">ADMIN</a></li>';
+                    echo '<li class="nav__li"><a class="nav__a underline" href="./includes/logout.inc.php">LOGOUT</a></li>';
+                }
+                else {  
+                    echo '<li class="nav__li"><a class="nav__a underline" href="./login.php">LOGIN</a></li>'; 
+                }
+            ?>
         </ul>
         <ul id="nav__ul--mobile">
             <figure>
