@@ -124,6 +124,11 @@ nav {
     align-items: center;
 }
 
+.nav__ul--login {
+    display: flex;
+    align-items: center;
+}
+
 .nav__li {
     padding: 12px;
 }
@@ -282,6 +287,11 @@ nav {
     background-color: #8a0f0b;
     height: 400px;
     width: 600px;
+}
+
+.login__header {
+    display: flex;
+    justify-content: center;
 }
 
 .login__header--header {
