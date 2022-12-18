@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -248,7 +247,7 @@ nav {
 .info-box__li--input {
     background: none;
     border-radius: 3rem;
-    padding: 16px 64px;
+    padding: 16px 32px;
     letter-spacing: 1px;
 }
 
@@ -326,6 +325,67 @@ nav {
 .login__disclaimer--text {
     font-size: 16px;
 }
+
+/* DEVELOPMENT */
+#development {
+    height: 100vh;
+}
+
+/* ADMIN PAGE */
+
+.player__details {
+    display: flex;
+    flex-direction: column;
+    background-color: #7f0caa;
+    padding: 0 32px;
+    padding-bottom: 32px;
+}
+
+.player__details--input {
+    margin-right: 8px;
+    color: black;
+    border-radius: 3rem;
+    border: none;
+    padding: 8px 16px;
+    border-right: 16px;
+    letter-spacing: 1px;
+}
+
+.player__details--button {
+    margin-top: 16px;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border: none;
+}
+
+.player__details--label {
+    margin-top: 16px;
+}
+
+.short {
+    max-width: 75px;
+}
+
+.medium {
+    max-width: 150px;
+}
+
+.long {
+    width: 250px;
+}
+
+.player__details--subheading {
+    padding: 8px;
+}
+
+/* DEVELOPMENT */
+#development {
+    height: 100vh;
+}
+
 
 /* OTHER SCREENS */
 @media only screen and (max-width: 1100px) {
