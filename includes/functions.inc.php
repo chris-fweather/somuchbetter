@@ -69,7 +69,7 @@ function createUser($conn, $username, $pwd) {
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    header('location: ../bin/signup.php?error=success');
+    header('location: ../bin/signup.php?success');
     exit();
 }
 
@@ -88,7 +88,7 @@ function loginUser($conn, $username, $pwd) {
     $uidExists = uidExists($conn, $username);
 
     if ($uidExists === false) {
-        header('location: ../bin/signup.php?error=wronglogin');
+        header('location: ../login.php?error=wronglogin');
         exit();  
     }
 
@@ -96,7 +96,7 @@ function loginUser($conn, $username, $pwd) {
     $checkPwd = password_verify($pwd, $hashedPwd);
 
     if ($checkPwd === false) {
-        header('location: ../bin/signup.php?error=wronglogin');
+        header('location: ../login.php?error=wronglogin');
         exit(); 
     }
 
@@ -107,4 +107,31 @@ function loginUser($conn, $username, $pwd) {
         header('location: ../index.php');
         exit();
     }
+}
+
+function emptyInputRoster($name, $age, $location, $username, $discord, $twitter, $twitch) {
+    $result;
+    if (empty($name) || empty($age) || empty($location) || empty($username) || empty($discord) || empty($twitter) || empty($twitch)) {
+        $result = true;
+    }
+    else {
+       $result = false; 
+    }
+    return $result;
+}
+
+function createPlayer($conn, $name, $age, $location, $username, $discord, $twitter, $twitch) {
+    $sql = 'INSERT INTO players (playersName, playersAge, playersLocation, playersUsername, playersDiscord, playersTwitter, playersTwitch) VALUES (?, ?, ?, ?, ?, ?, ?);';
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header('location: ../admin.php?error=stmtfailed');
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, 'sssssss', $name, $age, $location, $username, $discord, $twitter, $twitch);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
+    header('location: ../admin.php?success');
+    exit();
 }
