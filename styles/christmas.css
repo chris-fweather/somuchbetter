@@ -21,6 +21,10 @@ body {
     color: #CC231E;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 li {
     list-style: none;
 }
@@ -380,6 +384,48 @@ nav {
 
 .player__details--subheading {
     padding: 8px;
+    letter-spacing: 2px;
+}
+
+/* ROSTERR */
+#roster {
+    height: 100vh;
+}
+
+.roster__content--header {
+    font-size: 64px;
+    letter-spacing: 5px;
+    background-color: #8a0f0b;
+    color: white;
+    margin-bottom: 32px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: black;
+    text-align: left;
+}
+
+th {
+    font-size: 32px;
+    letter-spacing: 5px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid white;
+}
+
+td {
+    padding: 16px 0px;
+    padding-left: 8px;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    background-color: #8a0f0b;
+}
+
+.fa-square-twitter {
+    font-size: 32px;
 }
 
 /* DEVELOPMENT */
@@ -479,6 +525,31 @@ nav {
         font-size: 13px;
         letter-spacing: 0px;
     }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        color: black;
+        text-align: left;
+    }
+    
+    th {
+        font-size: 10px;
+        letter-spacing: 5px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid white;
+    }
+    
+    td {
+        padding: 16px 0px;
+        padding-left: 8px;
+        font-size: 12px;
+        letter-spacing: 3px;
+        font-weight: bold;
+        border-bottom: 1px solid white;
+        background-color: #8a0f0b;
+    }
+    
 }
 
 /* XMAS LIGHTS */
